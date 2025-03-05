@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../js/0305.js"></script>
+    <script>
+      console.log("Hello~~");
+      console.log("100");
+      console.log(100);
+      console.log(90 >= 60);
+      console.log("90" + 60);
+      console.log("5" + (3 + 2));
+      // -------------------------------
+      let x = 9;
+      let y = 4;
+      console.log(x + " + " + y + " = ", x + y);
+      console.log(x + " - " + y + " = ", x - y);
+      console.log(x + " * " + y + " = ", x * y);
+      console.log(x + " / " + y + " = ", x / y);
+      //---------------------------------
+      // in ``, variables use ${var};
+      console.log(`${x} + ${y} = ${x + y}`);
+      console.log(`${x} - ${y} = ${x - y}`);
+      console.log(`${x} * ${y} = ${x * y}`);
+      console.log(`${x} / ${y} = ${x / y}`);
+      console.log(`${x} / ${y} = ${(x / y).toFixed(2)}`); // 指定進位到第幾位
+      console.log(`${x} / ${y} = ${Math.floor(x / y)}`); // 無條件捨去
+      console.log(`${x} / ${y} = ${Math.round(x / y)}`); // 四捨五入
+      console.log(`${x} / ${y} = ${Math.ceil(x / y)}`); // 無條件進位
+    </script>
+  </body>
+</html>
