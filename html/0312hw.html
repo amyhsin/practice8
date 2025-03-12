@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const account = "qazwsx";
+      const password = "zxcvbn";
+      let correct = false;
+      let wrongCounter = 0;
+
+      while (!correct && wrongCounter < 3) {
+        let insertAccount = window.prompt("請輸入帳號");
+        let insertPasswaord = window.prompt("請輸入密碼");
+        if (insertAccount === account && insertPasswaord === password) {
+          window.alert("帳號密碼正確");
+          correct = true;
+        } else if (insertAccount === account && insertPasswaord !== password) {
+          window.alert("密碼錯誤");
+          wrongCounter++;
+        } else if (insertAccount !== account && insertPasswaord === password) {
+          window.alert("帳號錯誤");
+          wrongCounter++;
+        } else {
+          window.alert("帳號密碼錯誤");
+          wrongCounter++;
+        }
+        if (wrongCounter > 0 && !correct) {
+          window.alert(`輸入錯誤累積${wrongCounter}次`);
+        }
+      }
+      if (wrongCounter >= 3) {
+        window.alert("請聯絡管理員");
+      }
+    </script>
+  </body>
+</html>
